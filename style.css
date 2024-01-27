@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    /* Colors */
+    --primary-color: #0044F3;
+    --secondary-color: #95B5FC;
+    --third-color: #06d6a0;
+    --white: #FFF;
+    --black: #000;
+    --gray: #d1d1d1;
+    /* Fonts */
+    --primary-font: 'Inter', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: var(--primary-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    background-color: var(--primary-color);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 500px;
+    height: 150px;
+    padding: 3rem 0 5rem;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--white);
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+}
+
+.progress-bar {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    color: var(--white);
+    padding-left: 15px;
+    transition: .5s ease-in-out;
+}
+
+.step-one {
+    background-color: var(--primary-color);
+    border-radius: 8px 0 0 8px;
+}
+
+.step-one:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid var(--primary-color);
+    transform: rotate(90deg);
+    position: absolute;
+    right: -30px;
+    z-index: 2;
+}
+
+.step-two {
+    background-color: var(--secondary-color);
+}
+
+.step-two:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid var(--secondary-color);
+    transform: rotate(90deg);
+    position: absolute;
+    right: -30px;
+    z-index: 2;
+}
+
+.checked-step-two {
+    background-color: var(--primary-color);
+}
+
+.checked-step-two:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid var(--primary-color);
+    transform: rotate(90deg);
+    position: absolute;
+    right: -30px;
+    z-index: 2;
+    transition: .5s ease-in-out;
+}
+
+.step-three {
+    background-color: var(--white);
+    border-radius: 0 8px 8px 0;
+    color: var(--black);
+}
+
+.all-checked {
+    background-color: var(--third-color);
+}
+
+.all-checked:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid var(--third-color);
+    transform: rotate(90deg);
+    position: absolute;
+    right: -30px;
+    z-index: 2;
+    transition: .5s;
+}
+
+.btn-next-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    width: 100px;
+    height: 40px;
+    color: var(--white);
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn-next-section:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-finish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    width: 100px;
+    height: 40px;
+    color: var(--white);
+    border-radius: 8px;
+    background-color: var(--third-color);
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn-finish:hover {
+    background-color: var(--white);
+    color: var(--third-color);
+    border-color: var(--third-color);
+}
